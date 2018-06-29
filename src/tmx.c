@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdint.h> /* int32_t */
+#include "tstdint.h" /* int32_t */
 #include <errno.h>
 
 #include "tmx.h"

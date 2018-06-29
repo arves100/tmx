@@ -25,11 +25,11 @@ set(SOURCES
     "src/tmx_hash.c")
 set(HEADERS "src/tmx.h" "src/tsx.h")
 
-include(CheckIncludeFiles)
-CHECK_INCLUDE_FILES("stdint.h" STDINT_H)
-if(NOT STDINT_H)
-    message(FATAL_ERROR "error: required header stdint.h not found")
-endif(NOT STDINT_H)
+#include(CheckIncludeFiles)
+#CHECK_INCLUDE_FILES("stdint.h" STDINT_H)
+#if(NOT STDINT_H)
+#    message(FATAL_ERROR "error: required header stdint.h not found")
+#endif(NOT STDINT_H)
 
 include(TestBigEndian)
 TEST_BIG_ENDIAN(SYS_BE)

@@ -14,7 +14,7 @@
 #define TMX_H
 
 #include <stddef.h>
-#include <stdint.h>
+#include "tstdint.h"
 
 #ifndef TMXEXPORT
 #define TMXEXPORT
