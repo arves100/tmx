@@ -37,6 +37,15 @@
 #ifndef _MSC_STDINT_H_ // [
 #define _MSC_STDINT_H_
 
+#if _MSC_VER > 1000
+#pragma once
+#endif
+
+#if _MSC_VER >= 1600 // [
+#include <stdint.h>
+#else // ] _MSC_VER >= 1600 [
+
+
 #define _In_reads_(size)
 #define _In_reads_opt_(size)
 #define _In_reads_bytes_(size)
@@ -53,14 +62,6 @@
 #define _COM_Outptr_opt_
 #define _COM_Outptr_opt_result_maybenull_
 #define _Field_size_bytes_full_(size)
-
-#if _MSC_VER > 1000
-#pragma once
-#endif
-
-#if _MSC_VER >= 1600 // [
-#include <stdint.h>
-#else // ] _MSC_VER >= 1600 [
 
 #include <limits.h>
 
